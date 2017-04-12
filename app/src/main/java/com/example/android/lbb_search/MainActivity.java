@@ -43,9 +43,21 @@ public class MainActivity extends AppCompatActivity {
                 Place place = PlaceAutocomplete.getPlace(this, data);
                 Log.e("Tag", "Place: " + place.getAddress() + place.getPhoneNumber());
 
-                ((TextView) findViewById(R.id.searched_address))
-                        .setText(place.getName() + ",\n" +
-                                place.getAddress() + "\n" + place.getPhoneNumber());
+                ((TextView) findViewById(R.id.name))
+                        .setText("Name: "+place.getName());
+
+                ((TextView) findViewById(R.id.address))
+                        .setText("Address: "+place.getAddress());
+
+                ((TextView) findViewById(R.id.phoneno))
+                        .setText("Phone No.: "+place.getPhoneNumber());
+
+                ((TextView) findViewById(R.id.rating))
+                        .setText("Rating: "+String.valueOf(place.getRating()));
+
+                ((TextView) findViewById(R.id.website))
+                        .setText("Website: "+String.valueOf(place.getWebsiteUri()));
+
 
             } else if (resultCode == PlaceAutocomplete.RESULT_ERROR) {
                 Status status = PlaceAutocomplete.getStatus(this, data);
