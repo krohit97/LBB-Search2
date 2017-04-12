@@ -68,6 +68,20 @@
         android:textSize="15sp"
         />
 
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/website"/>
 
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.54"
+        android:paddingLeft="15dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/map"/>
 
     </RelativeLayout>
